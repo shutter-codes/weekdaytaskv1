@@ -1,0 +1,52 @@
+/* Button.css */
+.ButtonContainer {
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.8rem 1.2rem;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .ButtonContainer:hover {
+    cursor: pointer;
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Variants */
+  .Default {
+    background: linear-gradient(to right, #4CAF50, #8BC34A);
+    color: #fff;
+  }
+  
+  .Secondary {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  /* Icons */
+  .LeftIcon,
+  .RightIcon {
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .ButtonContainer:hover .LeftIcon,
+  .ButtonContainer:hover .RightIcon {
+    transform: scale(1.1);
+  }
+  
+  /* Text */
+  .ButtonText {
+    font-family: 'Roboto', sans-serif;
+  } 

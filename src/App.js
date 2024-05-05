@@ -6,11 +6,12 @@ import { useSelector } from "react-redux";
 // styles
 import "./App.css";
 // components
-import { Card, FilterGroup } from "./components";
+import Card from "./components/Card";
+import FilterGroup from "./components/FilterSection.js"
 // utils & static data
-import { filteredJobs } from "./utils/helperFunctions";
+import { filteredJobs } from "./utils/service";
 // api
-import { fetchJdList } from "./api/client";
+import  {fetchJdList}  from "../src/api/apiConfig.js";
 
 function App() {
   const [data, setData] = useState([]);

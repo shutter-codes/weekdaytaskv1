@@ -1,0 +1,214 @@
+/* Card.css */
+.CardContainer {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 0 auto;
+    font-size: 1rem;
+    max-width: 900px;
+    background-color: var(--neutral-white);
+    text-transform: capitalize;
+  }
+  
+  @media (max-width: 768px) {
+    .CardContainer {
+      padding: 1rem;
+      gap: 1rem;
+    }
+  }
+  
+  .CardContainer:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
+  }
+  
+  .CardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .PostedOnDate {
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px;
+    font-size: 0.875rem;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+  }
+  
+  .Details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .Details {
+      gap: 1rem;
+    }
+  }
+  
+  .MetadataHeader {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .MetadataHeader {
+      gap: 0.5rem;
+    }
+  }
+  
+  .MetadataHeader img {
+    height: 4rem;
+    width: 4rem;
+    object-fit: contain;
+    border-radius: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .MetadataHeader img {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+  
+  .MetadataHeader > div h4 {
+    color: var(--text-tertiary);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .MetadataHeader > div h4 {
+      font-size: 1rem;
+    }
+  }
+  
+  .MetadataHeader > div > p {
+    color: var(--neutral-black);
+    line-height: 1.5;
+    text-align: start;
+    margin: 0.25rem 0;
+  }
+  
+  .MetadataHeader > div > p:last-child {
+    font-size: 0.875rem;
+  }
+  
+  @media (max-width: 768px) {
+    .MetadataHeader > div > p:last-child {
+      font-size: 0.75rem;
+    }
+  }
+  
+  .EstimatedSalary {
+    color: var(--gray);
+    font-size: 0.875rem;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .EstimatedSalary {
+      font-size: 0.75rem;
+    }
+  }
+  
+  .EstimatedSalary > span {
+    font-size: 0.75rem;
+  }
+  
+  .CompanyDescription {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .CompanyDescription > h3 {
+    font-weight: 600;
+    text-align: start;
+    margin: 0;
+    color: var(--text-quarternery);
+  }
+  
+  .CompanyDescription > div p {
+    text-align: start;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: var(--neutral-black);
+    overflow: hidden;
+    max-height: 180px;
+    text-overflow: clip;
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 768px) {
+    .CompanyDescription > div p {
+      max-height: 112px;
+    }
+  }
+  
+  .ShowMoreBtn {
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(rgba(255, 255, 255, 0.75), var(--neutral-white));
+    bottom: 0;
+    left: 0;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+  }
+  
+  .ShowMoreBtn > span {
+    color: var(--bg-secondary);
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .Experience > h4 {
+    margin: 0;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    text-align: start;
+  }
+  
+  .Experience > p {
+    margin: 0;
+    color: var(--neutral-black);
+    text-align: start;
+  }
+  
+  .MatchScoreContainer {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(closest-side, var(--neutral-white) 69%, transparent 80% 100%),
+      conic-gradient(var(--bg-primary) 75%, #c7f4db 0);
+  }
+  
+  .MatchScoreContainer > div {
+    background-color: var(--neutral-white);
+    height: 1.75rem;
+    width: 1.75rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.875rem;
+    color: var(--success);
+  }
