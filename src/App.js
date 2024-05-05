@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Grid, Box } from "@mui/material";
 import { useSelector } from "react-redux";
+import { CircularProgress } from '@mui/material';
 
 // styles
 import "./App.css";
@@ -65,6 +66,7 @@ function App() {
         hasMore={hasMore}
         loader={
           <Box display="flex" justifyContent="center" mt={2} minHeight="80px">
+            <CircularProgress size={24} style={{ marginRight: '8px', color: 'green' }} />
             Fetching Available jobs...
           </Box>
         }

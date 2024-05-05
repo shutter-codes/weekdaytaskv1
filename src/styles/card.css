@@ -6,7 +6,7 @@
     transition: box-shadow 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.3rem;
     margin: 0 auto;
     font-size: 1rem;
     max-width: 900px;
