@@ -1,6 +1,5 @@
 // components
 import { useState } from "react";
-// components
 import Button from "./Button";
 import JdDsec from "./JobDesc";
 // styles
@@ -52,7 +51,7 @@ const Card = (props) => {
             {`Estimated Salary: ${data?.salaryCurrencyCode} ${
               data?.minJdSalary ?? 0
             } - ${data?.maxJdSalary ?? 0} LPA `}
-            <span>✅</span>
+          
           </div>
         </section>
         <section className="CompanyDescription">

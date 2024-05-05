@@ -7,11 +7,11 @@ import { useSelector } from "react-redux";
 import "./App.css";
 // components
 import Card from "./components/Card";
-import FilterGroup from "./components/FilterSection.js"
+import FilterGroup from "./components/FilterSection"
 // utils & static data
 import { filteredJobs } from "./utils/service";
 // api
-import  {fetchJdList}  from "../src/api/apiConfig.js";
+import  {fetchJdList}  from "../src/api/client.js"
 
 function App() {
   const [data, setData] = useState([]);
@@ -54,7 +54,8 @@ function App() {
 
   return (
     <div className="App">
-      <div>Filters</div>
+     
+     <div className="home">Weekday Task</div>
 
       <FilterGroup />
 
