@@ -56,9 +56,12 @@ function App() {
   return (
     <div className="App">
      
-     <div className="home">Weekday Task</div>
+    
 
-      <FilterGroup />
+     <Box sx={{ position: 'sticky', top: 0, zIndex: 1, bgcolor: 'background.paper', padding: 2 }}>
+     <div className="home">Weekday Task</div>
+        <FilterGroup />
+      </Box>
 
       <InfiniteScroll
         dataLength={data?.length}

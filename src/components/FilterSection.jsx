@@ -1,7 +1,6 @@
 import { Box, Grid, TextField } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { APPLY_FILTERS } from "../redux/actionTypes";
-
 // components
 import MultiSelect from "./MultiSelect";
 // utils & static data
@@ -15,15 +14,10 @@ import {
 
 const FilterGroup = () => {
   const dispatch = useDispatch();
-
   // updating state of filters based on applied filters
   const handleApplyFilter = (filterName, value) => {
-    dispatch({
-      type: APPLY_FILTERS,
-      payload: { filterName, value },
-    });
+    dispatch({ type: APPLY_FILTERS, payload: { filterName, value } });
   };
-
 
   const filters = {
     roles: {
@@ -69,27 +63,27 @@ const FilterGroup = () => {
     <Box sx={{ flexGrow: 1, marginBottom: 2, marginTop: 1, padding: 2 }}>
       <Grid container spacing={2} justifyContent="center">
         {/* Roles filter */}
-        <Grid item xs={12} sm="auto" sx={{ minWidth: "280px" }}>
+        <Grid item xs={12} sm={6} md={4}>
           <MultiSelect {...filters.roles} />
         </Grid>
         {/* no. of employee filter */}
-        {/* <Grid item xs={12} sm="auto" sx={{ minWidth: "280px" }}>
+        {/* <Grid item xs={12} sm={6} md={4}>
           <MultiSelect {...filters.employees} />
         </Grid> */}
         {/* experience filter */}
-        <Grid item xs={12} sm="auto" sx={{ minWidth: "280px" }}>
+        <Grid item xs={12} sm={6} md={4}>
           <MultiSelect {...filters.experience} />
         </Grid>
         {/* location filter */}
-        <Grid item xs={12} sm="auto" sx={{ minWidth: "280px" }}>
+        <Grid item xs={12} sm={6} md={4}>
           <MultiSelect {...filters.mode} />
         </Grid>
         {/* minimum salary filter */}
-        <Grid item xs={12} sm="auto" sx={{ minWidth: "280px" }}>
+        <Grid item xs={12} sm={6} md={4}>
           <MultiSelect {...filters.minSalary} />
         </Grid>
         {/* company name search filter */}
-        <Grid item xs={12} sm="auto" sx={{ minWidth: "280px" }}>
+        <Grid item xs={12} sm={6} md={4}>
           <TextField fullWidth variant="outlined" {...filters.companyName} />
         </Grid>
       </Grid>
