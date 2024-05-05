@@ -31,7 +31,7 @@ const Card = (props) => {
           aria-valuemax="100"
         >
           <div>
-            <span>75%</span>
+            <span>60%</span>
           </div>
         </div>
       </section>

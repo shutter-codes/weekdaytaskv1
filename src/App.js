@@ -88,7 +88,7 @@ function App() {
           }}
         >
           {data?.map((job, index) => (
-            <Grid item key={index} xs={12} sm={6} md={4} lg={3} xl={2}>
+            <Grid item key={index} xs={12} sm={6} md={5} lg={4} xl={3}>
               <Card key={job.jdUid} data={job} />
             </Grid>
           ))}
