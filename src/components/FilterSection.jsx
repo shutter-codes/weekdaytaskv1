@@ -63,27 +63,30 @@ const FilterGroup = () => {
     <Box sx={{ flexGrow: 1, marginBottom: 2, marginTop: 1, padding: 2 }}>
       <Grid container spacing={2} justifyContent="center">
         {/* Roles filter */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <MultiSelect {...filters.roles} />
         </Grid>
         {/* no. of employee filter */}
-        {/* <Grid item xs={12} sm={6} md={4}>
+
+        {/* this is of no use as the values are not present in API */}
+        <Grid item xs={12} sm={6} md={2}>
           <MultiSelect {...filters.employees} />
-        </Grid> */}
+        </Grid>
+
         {/* experience filter */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <MultiSelect {...filters.experience} />
         </Grid>
         {/* location filter */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <MultiSelect {...filters.mode} />
         </Grid>
         {/* minimum salary filter */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <MultiSelect {...filters.minSalary} />
         </Grid>
         {/* company name search filter */}
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12} sm={6} md={2}>
           <TextField fullWidth variant="outlined" {...filters.companyName} />
         </Grid>
       </Grid>

@@ -22,7 +22,7 @@ const Card = (props) => {
   return (
     <div className="CardContainer">
       <section className="CardHeader">
-        <div className="PostedOnDate">Posted 7 days ago</div>
+        <div className="PostedOnDate">⌛ Posted 7 days ago</div>
         <div
           className="MatchScoreContainer"
           role="progressbar"

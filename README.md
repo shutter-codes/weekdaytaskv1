@@ -1,6 +1,8 @@
 # Project Name
 
 Weekday Task
+Open the live application [here](https://weekdaytaskv1.vercel.app/).
+   
 
 ## Description
 
