@@ -3,6 +3,8 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { Grid, Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import { CircularProgress } from '@mui/material';
+import {IconButton } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 // styles
 import "./App.css";
@@ -53,15 +55,40 @@ function App() {
     setData(filteredJobs(allJobs, filters));
   }, [allJobs, filters]);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="App">
-     
+     <div className="home">Weekday Task</div>
     
 
-     <Box sx={{ position: 'sticky', top: 0, zIndex: 1, bgcolor: 'background.paper', padding: 2 }}>
-     <div className="home">Weekday Task</div>
+     <Box
+      sx={{
+        position: 'sticky',
+        top: 0,
+        zIndex: 1,
+        bgcolor: 'background.paper',
+        padding: 2,
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      
+      <div className="desktop-view">
         <FilterGroup />
-      </Box>
+      </div>
+      <div className="mobile-view">
+        <IconButton onClick={toggleMenu}>
+          <MenuIcon />
+        </IconButton>
+        {isMenuOpen && <FilterGroup />}
+      </div>
+    </Box>
 
       <InfiniteScroll
         dataLength={data?.length}
