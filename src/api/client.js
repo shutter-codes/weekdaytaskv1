@@ -1,15 +1,13 @@
-import { GET_JD_LIST } from "./methods";
-
-// method to fetch jd list
 export const fetchJdList = async (body) => {
   const myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
   const requestOptions = {
-    method: GET_JD_LIST.METHOD,
+    method: "POST",
     headers: myHeaders,
     body,
   };
-  const res = await fetch(GET_JD_LIST.URL, requestOptions);
+  
+  const res = await fetch("https://api.weekday.technology/adhoc/getSampleJdJSON", requestOptions);
   const result = await res?.json();
   return result;
 };

@@ -1,8 +1,6 @@
-// components
 import { useState } from "react";
 import Button from "./Button";
 import JdDsec from "./JobDesc";
-// styles
 import "../styles/card.css";
 
 const Card = (props) => {
