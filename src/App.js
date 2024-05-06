@@ -63,7 +63,17 @@ function App() {
 
   return (
     <div className="App">
-     <div className="home">Weekday Task</div>
+     <div className="home1">
+      <h1 className="home">Weekday Task</h1>
+     
+      <div className="mobile-view">
+        <IconButton onClick={toggleMenu}>
+          <MenuIcon />
+        </IconButton>
+        {isMenuOpen && <FilterGroup />}
+      </div>
+     
+     </div>
     
 
      <Box
@@ -82,12 +92,7 @@ function App() {
       <div className="desktop-view" style={{ width: '100%' }}>
     <FilterGroup filterDirection="row" />
   </div>
-      <div className="mobile-view">
-        <IconButton onClick={toggleMenu}>
-          <MenuIcon />
-        </IconButton>
-        {isMenuOpen && <FilterGroup />}
-      </div>
+     
     </Box>
 
       <InfiniteScroll
