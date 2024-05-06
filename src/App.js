@@ -72,16 +72,16 @@ function App() {
         top: 0,
         zIndex: 1,
         bgcolor: 'background.paper',
-        padding: 2,
+        padding: 1,
         display: 'flex',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         alignItems: 'center',
       }}
     >
       
-      <div className="desktop-view">
-        <FilterGroup />
-      </div>
+      <div className="desktop-view" style={{ width: '100%' }}>
+    <FilterGroup filterDirection="row" />
+  </div>
       <div className="mobile-view">
         <IconButton onClick={toggleMenu}>
           <MenuIcon />
